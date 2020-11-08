@@ -33,7 +33,7 @@ Para executar os testes e compilar o projeto deve executar o comando "***mvn tes
 
 ### IDE STS
 
-Executar as classes “ClienteControllerTest.java”, “ItemPedidoControllerTest.java”, “PedidoControllerTest.java” e “ProdutoControllerTest.java”.
+Executar as classes “PedidoControllerTest.java” e “ProdutoControllerTest.java”.
 ## Script do banco
 
 ```
