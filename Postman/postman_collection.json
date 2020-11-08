@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "729518ca-c41e-41ea-aeba-910bdad7c887",
+		"name": "EICON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produto JSON",
+			"item": [
+				{
+					"name": "Incluindo produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Biscoito\",\r\n    \"categoria\": \"Alimento\",\r\n    \"preco\": 2.73\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"descricao\": \"Leite\",\r\n    \"categoria\": \"Alimento\",\r\n    \"preco\": 4.52\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/produto/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de todos os produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/produto/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de produto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Produto XML",
+			"item": [
+				{
+					"name": "Incluindo produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<ProdutoBO>\r\n    <descricao>Biscoito</descricao>\r\n    <categoria>Alimento</categoria>\r\n    <preco>2.73</preco>\r\n</ProdutoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualização de produto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<ProdutoBO>\r\n    <id>4</id>\r\n    <descricao>Biscoito</descricao>\r\n    <categoria>Alimento</categoria>\r\n    <preco>4.52</preco>\r\n</ProdutoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/produto/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de todos os produtos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/produto/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de produto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/produto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedido JSON",
+			"item": [
+				{
+					"name": "Busca de pedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/pedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de todos os pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/pedido/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de pedido pelo numPedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/pedido/numpedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"numpedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de pedido pela dataCadastro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataCadastro\": \"05/10/2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/dataCadastro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"dataCadastro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar pedido com produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataCadastro\": \"25/05/2020\",\r\n    \"codCliente\": 1,\r\n    \"itemPedidos\": [\r\n        {\r\n            \"produtoBO\": {\r\n                \"id\": 1\r\n            },\r\n            \"qtde\": 2\r\n        },\r\n        {\r\n            \"produtoBO\": {\r\n                \"id\": 3\r\n            },\r\n            \"qtde\": 7\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/salvarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"salvarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar pedido com produto sem qdte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataCadastro\": \"25/05/2020\",\r\n    \"codCliente\": 1,\r\n    \"itemPedidos\": [\r\n        {\r\n            \"produtoBO\": {\r\n                \"id\": 1\r\n            }\r\n        },\r\n        {\r\n            \"produtoBO\": {\r\n                \"id\": 3\r\n            },\r\n            \"qtde\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/salvarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"salvarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"dataCadastro\": \"04/10/2020\",\r\n    \"codCliente\": 1,\r\n    \"itemPedidos\": [\r\n        {\r\n            \"produtoBO\": {\r\n                \"id\": 2\r\n            },\r\n            \"qtde\": 9\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/pedido/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8e387b13-c7f6-4b0d-bc26-8499ae3e990b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0bac2d59-434e-4539-be4a-0d479bc70155",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedido XML",
+			"item": [
+				{
+					"name": "Busca de pedido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/pedido/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de todos os pedidos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/pedido/todos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de pedido pelo numPedido",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8090/pedido/numpedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"numpedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca de pedido pela dataCadastro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PedidoBO>\r\n    <dataCadastro>05/10/2020</dataCadastro>\r\n</PedidoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/dataCadastro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"dataCadastro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar pedido com produto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PedidoBO>\r\n    <dataCadastro>25/05/2020</dataCadastro>\r\n    <codCliente>1</codCliente>\r\n    <itemPedidos>\r\n        <itemPedidos>\r\n            <qtde>2</qtde>\r\n            <produtoBO>\r\n                <id>4</id>\r\n            </produtoBO>\r\n        </itemPedidos>\r\n        <itemPedidos>\r\n            <qtde>1</qtde>\r\n            <produtoBO>\r\n                <id>9</id>\r\n            </produtoBO>\r\n        </itemPedidos>\r\n    </itemPedidos>\r\n</PedidoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/salvarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"salvarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar pedido com produto sem qdte",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PedidoBO>\r\n    <dataCadastro>25/05/2020</dataCadastro>\r\n    <codCliente>1</codCliente>\r\n    <itemPedidos>\r\n        <itemPedidos>\r\n            <produtoBO>\r\n                <id>4</id>\r\n            </produtoBO>\r\n        </itemPedidos>\r\n        <itemPedidos>\r\n            <qtde>0</qtde>\r\n            <produtoBO>\r\n                <id>9</id>\r\n            </produtoBO>\r\n        </itemPedidos>\r\n    </itemPedidos>\r\n</PedidoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido/salvarPedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"salvarPedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pedido",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<PedidoBO>\r\n    <id>6</id>\r\n    <dataCadastro>04/08/2020</dataCadastro>\r\n    <codCliente>1</codCliente>\r\n    <itemPedidos>\r\n        <itemPedidos>\r\n            <qtde>4</qtde>\r\n            <produtoBO>\r\n                <id>9</id>\r\n            </produtoBO>\r\n        </itemPedidos>\r\n    </itemPedidos>\r\n</PedidoBO>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/pedido/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"pedido",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a20ab529-38c9-477c-a119-4481355327be",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "461653fe-75f1-49ac-91bc-c3b49bb1ffd7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
